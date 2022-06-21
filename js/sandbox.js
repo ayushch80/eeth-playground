@@ -1,3 +1,3 @@
-import { keccak256 } from './keccak256.js'
-const term = keccak256('hi')
+import { etherToGwei } from './ether-to-gwei.js';
+const term = etherToGwei('1000').toString();
 console.log(term);
