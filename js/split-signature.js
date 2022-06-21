@@ -1,5 +1,5 @@
-import { logger } from './../logger/logger';
-import { arrayify, hexlify, hexZeroPad, isBytesLike, isHexString, zeroPad, } from './bytes';
+import { logger } from './logger.js';
+import { arrayify, hexlify, hexZeroPad, isBytesLike, isHexString, zeroPad, } from './bytes.js';
 export function splitSignature(signature) {
     const result = {
         r: '0x',
