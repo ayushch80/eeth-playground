@@ -1,4 +1,4 @@
-import { Keccak } from './sha3.js';
+import { Keccak } from './sha3_.js';
 export function keccak256(data) {
     let bufferableData;
     if (typeof data === 'string') {
