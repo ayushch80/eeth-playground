@@ -12,7 +12,7 @@ document.body.onkeyup = function() {
     iFrame.open()
     iFrame.writeln(
         '<script>' +
-        jsTextArea.value +
+        usrInpt.value +
         '</script>'
     )
     iFrame.close()
