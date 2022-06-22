@@ -1,4 +1,4 @@
-import Buffer from "./buffer.js";
+import { _buffer } from "./buffer.js";
 import sponge from "./sponge.js";
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
@@ -18,12 +18,12 @@ var createHash = function createHash(_ref) {
         var sponge = new _sponge["default"]({ capacity: size });
         this.update = function (input) {
             var encoding = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : "utf8";
-            if (Buffer.Buffer.isBuffer(input)) {
+            if (_buffer.Buffer.isBuffer(input)) {
                 sponge.absorb(input);
                 return _this;
             }
             if (typeof input === "string") {
-                return _this.update(Buffer.Buffer.from(input, encoding));
+                return _this.update(_buffer.Buffer.from(input, encoding));
             }
             throw new TypeError("Not a string or buffer");
         };
