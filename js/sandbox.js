@@ -1,20 +1,6 @@
-import { etherToGwei } from './ether-to-gwei.js';
+import { etherToGwei } from './eeth.js';
 import { etherToWei } from './ether-to-wei.js';
 import { gweiToEther } from './gwei-to-ether.js';
 import { weiToEther } from './wei-to-ether.js';
 import { splitSignature } from './split-signature.js';
-//const myCode = document.getElementById("mKey");
-//const usrInpt = myCode.elements.namedItem("userInput").value;
-const getEl = id => document.getElementById(id)
-const iFrame = getEl('iFrame').contentWindow.document
-const usrInpt = getEl('userInput')
-document.body.onkeyup = function() {
-    iFrame.open()
-    iFrame.writeln(
-    '<!doctype html><html><body><script src="js/ether-to-gwei.js" type="module"/>' +
-    '<script>' +
-    usrInpt.value +
-    '</script></body></html>'
-    )
-    iFrame.close()
-}
+console.log(etherToGwei(1000).toString());
