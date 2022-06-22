@@ -1,4 +1,4 @@
-import { keccak } from './keccak.js';
+import { keccak } from '../libraries/keccak.js';
 import { validateType } from '../shared/validate-type.js';
 export function toChecksumAddress(address) {
     validateType(address, ['string']);
