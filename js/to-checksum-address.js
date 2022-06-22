@@ -1,4 +1,4 @@
-import { keccak256 } from "https://cdn.jsdelivr.net/npm/keccak256@latest/keccak256.js";
+import { keccak } from './keccak.js';
 import { validateType } from './validate-type.js';
 export function toChecksumAddress(address) {
     validateType(address, ['string']);
