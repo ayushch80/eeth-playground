@@ -6,8 +6,8 @@ export function toChecksumAddress(address) {
         throw new Error(`Invalid Ethereum address "${address}"`);
     }
     const _address = address.toLowerCase().replace(/^0x/i, '');
-    const Keccak = new keccak(256);
-    const addressHash = Keccak.update(_address).digest('hex').replace(/^0x/i, '');
+    const Keccak = keccak();
+    const addressHash = Keccak.update(_address).hex.replace(/^0x/i, '');
     let checksumAddress = '0x';
     for (let i = 0; i < _address.length; i++) {
         if (parseInt(addressHash[i], 16) > 7) {
