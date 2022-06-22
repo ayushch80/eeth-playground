@@ -1085,19 +1085,6 @@ export function scientificStrToDecimalStr(scientificString) {
         return `${isNegative ? '-' : ''}${toReturn}`;
     }
 }
-function stripTrailingZeroes(numberString) {
-    const isNegative = numberString.startsWith('-');
-    numberString = numberString.replace('-', '');
-    numberString = numberString.replace(/\.0*$/g, '');
-    numberString = numberString.replace(/^0+/, '');
-    if (numberString.includes('.')) {
-        numberString = numberString.replace(/0+$/, '');
-    }
-    if (numberString.startsWith('.')) {
-        numberString = `0${numberString}`;
-    }
-    return `${isNegative ? '-' : ''}${numberString}`;
-}
 export function scientificStrToDecimalStr(scientificString) {
     if (!scientificString.match(/e/i)) {
         return stripTrailingZeroes(scientificString);
