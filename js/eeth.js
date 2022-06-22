@@ -1034,7 +1034,7 @@ export function hexToDecimal(hex) {
 
 
 //helpers.js
-function stripTrailingZeroes(numberString) {
+/*function stripTrailingZeroes(numberString) {
     const isNegative = numberString.startsWith('-');
     numberString = numberString.replace('-', '');
     numberString = numberString.replace(/\.0*$/g, '');
@@ -1091,7 +1091,7 @@ export function scientificStrToDecimalStr(scientificString) {
         const toReturn = stripTrailingZeroes(splitPaddedNumber.join(''));
         return `${isNegative ? '-' : ''}${toReturn}`;
     }
-}
+} */
 
 
 //tiny-big.js
