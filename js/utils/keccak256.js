@@ -1,4 +1,4 @@
-import { keccak } from './keccak.js';
+import { keccak } from '../libraries/keccak.js';
 export function keccak256(data) {
     if (typeof data === 'string') {
       let Data = (data.replace(/^0x/, ''), 'hex');
