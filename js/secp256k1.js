@@ -1,5 +1,4 @@
 /*! noble-secp256k1 - MIT License (c) 2019 Paul Miller (paulmillr.com) */
-import * as nodeCrypto from './crypto.js';
 const _0n = BigInt(0);
 const _1n = BigInt(1);
 const _2n = BigInt(2);
