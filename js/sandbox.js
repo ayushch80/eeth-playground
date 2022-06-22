@@ -8,12 +8,13 @@ import { splitSignature } from './split-signature.js';
 const getEl = id => document.getElementById(id)
 const iFrame = getEl('iFrame').contentWindow.document
 const usrInpt = getEl('userInput')
-function() {
+document.body.onkeyup = function() {
     iFrame.open()
     iFrame.writeln(
+    '<!doctype html><html><body>
     '<script>' +
     usrInpt.value +
-    '</script>'
+    '</script></body></html>'
     )
     iFrame.close()
 }
