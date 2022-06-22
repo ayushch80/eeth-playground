@@ -6,7 +6,6 @@ export function keccak256(data) {
     else {
         console.log("Input cant be processed");
     }
-    const Keccak = new keccak(256);
     let Keccak = keccak();
     const addressHash = '0x' + Keccak.update(Data).hex;
     return addressHash;
