@@ -8,7 +8,6 @@ export function keccak256(data) {
     }
     const Keccak = new keccak(256);
     let Keccak = keccak();
-    Keccak.update(Data)
-    const addressHash = '0x' + Keccak.hex;
+    const addressHash = '0x' + Keccak.update(Data).hex;
     return addressHash;
 }
