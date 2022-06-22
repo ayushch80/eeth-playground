@@ -11,7 +11,7 @@ const usrInpt = getEl('userInput')
 document.body.onkeyup = function() {
     iFrame.open()
     iFrame.writeln(
-    '<!doctype html><html><body>
+    '<!doctype html><html><body>' +
     '<script>' +
     usrInpt.value +
     '</script></body></html>'
