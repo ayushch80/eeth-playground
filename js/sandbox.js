@@ -7,6 +7,6 @@ import { keccak256 } from './keccak256.js'
 import { toChecksumAddress } from './to-checksum-address.js'
 import { computePublicKey } from './compute-public-key.js'
 import { computeAddress } from './compute-address.js';
-import { arrayify , concat , hexConcat , hexDataLength , hexDataSlice , hexStripZeros } from './bytes.js';
-const term = hexStripZeros([0, 0, 0, 48]);
+import { arrayify , concat , hexConcat , hexDataLength , hexDataSlice , hexStripZeros , hexValue } from './bytes.js';
+const term = hexValue(39);
 console.log(term); 
