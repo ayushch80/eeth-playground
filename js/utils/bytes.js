@@ -1,4 +1,4 @@
-import { logger } from './logger.js';
+import { logger } from '../logger/logger.js';
 function isHexable(value) {
     return !!value.toHexString;
 }
