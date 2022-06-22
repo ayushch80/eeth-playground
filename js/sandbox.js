@@ -7,5 +7,6 @@ import { keccak256 } from './keccak256.js'
 import { toChecksumAddress } from './to-checksum-address.js'
 import { computePublicKey } from './compute-public-key.js'
 import { computeAddress } from './compute-address.js';
-const term = computeAddress('0xb27cc8dea0177d910110e8d3ec5480d56c723abf433529f4063f261ffdb9297c')
+import { arrayify } from './bytes.js';
+const term = arrayify('0x1234')
 console.log(term); 
