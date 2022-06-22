@@ -1,5 +1,5 @@
-import Big from './big.js';
-import { hexToDecimal } from './hex-to-decimal.js';
+import Big from '../../libraries/big.js';
+import { hexToDecimal } from '../../utils/hex-to-decimal.js';
 import { scientificStrToDecimalStr } from './helpers.js';
 export class TinyBig extends Big {
     constructor(value) {
