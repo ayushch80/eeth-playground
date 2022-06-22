@@ -7,7 +7,7 @@ export function keccak256(data) {
     else {
         bufferableData = (data);
     }
-    const keccak = new Keccak(256);
-    const addressHash = '0x' + keccak.update(bufferableData).digest('hex');
+    const Keccak = new keccak(256);
+    const addressHash = '0x' + Keccak.update(bufferableData).digest('hex');
     return addressHash;
 }
