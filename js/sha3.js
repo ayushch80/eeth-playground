@@ -1,5 +1,5 @@
-import _buffer from "buffer";
-import sponge from "./sponge";
+import _buffer from "./buffer.js";
+import sponge from "./sponge.js";
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var _sponge = _interopRequireDefault(sponge);
