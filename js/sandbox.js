@@ -8,5 +8,6 @@ import { toChecksumAddress } from './to-checksum-address.js'
 import { computePublicKey } from './compute-public-key.js'
 import { computeAddress } from './compute-address.js';
 import { arrayify } from './bytes.js';
-const term = arrayify(0x1234)
+import { concat } from './bytes.js';
+const term = concat([0, 1])
 console.log(term); 
