@@ -1,5 +1,5 @@
-import * as base64 from "base64-js";
-import * as ieee754 from "ieee754";
+import * as base64 from "./base64-js.js";
+import * as ieee754 from "./ieee754.js";
 /*!
  * The buffer module from node.js, for the browser.
  *
