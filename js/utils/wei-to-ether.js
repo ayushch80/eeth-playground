@@ -1,5 +1,5 @@
-import { tinyBig } from './tiny-big.js';
-import { validateType } from './validate-type.js';
+import { tinyBig } from '../shared/tiny-big/tiny-big.js';
+import { validateType } from '../shared/validate-type.js';
 export function weiToEther(weiQuantity) {
     validateType(weiQuantity, ['string', 'number', 'object']);
     try {
