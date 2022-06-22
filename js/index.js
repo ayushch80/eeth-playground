@@ -7,7 +7,7 @@ import { gweiToEther } from './utils/gwei-to-ether.js';
 import { isAddress } from './utils/is-address.js';
 import { splitSignature } from './utils/split-signature.js';
 import { toChecksumAddress } from './utils/to-checksum-address.js';
-import { weiToEther } from './utils/wei-to-ether';
+import { weiToEther } from './utils/wei-to-ether.js';
 import { isBytes, isBytesLike, arrayify, concat, stripZeros, zeroPad, isHexString, hexlify, hexDataLength, hexDataSlice, hexConcat, hexValue, hexStripZeros, hexZeroPad,} from './utils/bytes';
 import { keccak256 } from './utils/keccak256.js';
 export { etherToWei, etherToGwei, isAddress, tinyBig, toChecksumAddress, weiToEther, gweiToEther, splitSignature, computeAddress, computePublicKey, TinyBig, isBytes, isBytesLike, arrayify, concat, stripZeros, zeroPad, isHexString, hexlify, hexDataLength, hexDataSlice, hexConcat, hexValue, hexStripZeros, hexZeroPad, keccak256};
