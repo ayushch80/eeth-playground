@@ -1,5 +1,5 @@
-import { tinyBig } from './tiny-big.js';
-import { validateType } from './validate-type.js';
+import { tinyBig } from '../shared/tiny-big/tiny-big.js';
+import { validateType } from '../shared/validate-type.js';
 export function etherToGwei(etherQuantity) {
     validateType(etherQuantity, ['string', 'number', 'object']);
     const result = tinyBig(etherQuantity).times('1000000000');
