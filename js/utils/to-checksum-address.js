@@ -1,5 +1,5 @@
 import { keccak } from './keccak.js';
-import { validateType } from './validate-type.js';
+import { validateType } from '../shared/validate-type.js';
 export function toChecksumAddress(address) {
     validateType(address, ['string']);
     if (!/^(0x)?[0-9a-f]{40}$/i.test(address)) {
