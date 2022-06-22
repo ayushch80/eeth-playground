@@ -2,3 +2,11 @@ import { etherToWei, etherToGwei, isAddress, tinyBig, toChecksumAddress, weiToEt
 console.clear();
 const term = computeAddress('0x2f2c419acf4a1da8c1ebea75bb3fcfbd3ec2aa3bf0162901ccdc2f38b8f92427',);
 console.log(term); 
+document.getElementById("btn_click").addEventListener("click", getData);
+function getData() {
+  const myCode = document.getElementById("mKey");
+  const myData = myCode.elements.namedItem("userInput").value;
+  var jsCode = `console.clear();
+                ${myData}`
+  $(".output").html(jsCode)
+}
