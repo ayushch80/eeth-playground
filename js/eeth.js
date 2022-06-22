@@ -1,3 +1,4 @@
+//big.js
 /*
  *  big.js v6.2.0
  *  A small, fast, easy-to-use library for arbitrary-precision decimal arithmetic.
@@ -1024,9 +1025,15 @@ export var Big = _Big_();
 
 /// <reference types="https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/master/types/big.js/index.d.ts" />
 export default Big;
+
+
+//hex-to-decimal.js
 export function hexToDecimal(hex) {
     return BigInt(hex).toString();
 }
+
+
+//helpers.js
 function stripTrailingZeroes(numberString) {
     const isNegative = numberString.startsWith('-');
     numberString = numberString.replace('-', '');
@@ -1085,11 +1092,78 @@ export function scientificStrToDecimalStr(scientificString) {
         return `${isNegative ? '-' : ''}${toReturn}`;
     }
 }
+
+
+//tiny-big.js
+function stripTrailingZeroes(numberString) {
+    const isNegative = numberString.startsWith('-');
+    numberString = numberString.replace('-', '');
+    numberString = numberString.replace(/\.0*$/g, '');
+    numberString = numberString.replace(/^0+/, '');
+    if (numberString.includes('.')) {
+        numberString = numberString.replace(/0+$/, '');
+    }
+    if (numberString.startsWith('.')) {
+        numberString = `0${numberString}`;
+    }
+    return `${isNegative ? '-' : ''}${numberString}`;
+}
+export function scientificStrToDecimalStr(scientificString) {
+    if (!scientificString.match(/e/i)) {
+        return stripTrailingZeroes(scientificString);
+    }
+    let [base, power] = scientificString.split(/e/i);
+    const isNegative = Number(base) < 0;
+    base = base.replace('-', '');
+    base = stripTrailingZeroes(base);
+    const [wholeNumber, fraction = ''] = base.split('.');
+    if (Number(power) === 0) {
+        return `${isNegative ? '-' : ''}${stripTrailingZeroes(base)}`;
+    }
+    else {
+        const includesDecimal = base.includes('.');
+        if (!includesDecimal) {
+            base = `${base}.`;
+        }
+        base = base.replace('.', '');
+        const baseLength = base.length;
+        let splitPaddedNumber;
+        if (Number(power) < 0) {
+            if (wholeNumber.length < Math.abs(Number(power))) {
+                base = base.padStart(baseLength + Math.abs(Number(power)) - wholeNumber.length, '0');
+            }
+            splitPaddedNumber = base.split('');
+            if (wholeNumber.length < Math.abs(Number(power))) {
+                splitPaddedNumber = ['.', ...splitPaddedNumber];
+            }
+            else {
+                splitPaddedNumber.splice(splitPaddedNumber.length - Math.abs(Number(power)), 0, '.');
+            }
+        }
+        else {
+            if (fraction.length < Math.abs(Number(power))) {
+                base = base.padEnd(baseLength + Math.abs(Number(power)) - fraction.length, '0');
+            }
+            splitPaddedNumber = base.split('');
+            if (fraction.length > Math.abs(Number(power))) {
+                splitPaddedNumber.splice(splitPaddedNumber.length - Math.abs(Number(power)), 0, '.');
+            }
+        }
+        const toReturn = stripTrailingZeroes(splitPaddedNumber.join(''));
+        return `${isNegative ? '-' : ''}${toReturn}`;
+    }
+}
+
+
+//validate-type.js
 export const validateType = (value, allowedTypes) => {
     if (!allowedTypes.includes(typeof value)) {
         throw new Error(`${allowedTypes.join(' or ')} required. Received ${typeof value}`);
     }
 };
+
+
+//ether-to-gwei.js
 export function etherToGwei(etherQuantity) {
     validateType(etherQuantity, ['string', 'number', 'object']);
     const result = tinyBig(etherQuantity).times('1000000000');
