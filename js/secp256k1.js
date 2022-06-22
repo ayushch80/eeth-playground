@@ -1024,10 +1024,6 @@ export const schnorr = {
     verifySync: schnorrVerifySync,
 };
 Point.BASE._setWindowSize(8);
-const crypto = {
-    node: nodeCrypto,
-    web: typeof self === 'object' && 'crypto' in self ? self.crypto : undefined,
-};
 const TAGS = {
     challenge: 'BIP0340/challenge',
     aux: 'BIP0340/aux',
