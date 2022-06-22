@@ -1,5 +1,4 @@
 import { etherToWei, etherToGwei, isAddress, tinyBig, toChecksumAddress, weiToEther, gweiToEther, splitSignature, computeAddress, computePublicKey, TinyBig, isBytes, isBytesLike, arrayify, concat, stripZeros, zeroPad, isHexString, hexlify, hexDataLength, hexDataSlice, hexConcat, hexValue, hexStripZeros, hexZeroPad, keccak256 } from './index.js';
-console.clear();
 document.getElementById("btn_click").addEventListener("click", getData);
 function getData() {
   const myCode = document.getElementById("mKey");
