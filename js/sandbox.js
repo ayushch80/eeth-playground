@@ -1,3 +1,4 @@
+document.getElementById("btn_click").addEventListener("click", getData);
 function getData() {
   const myCode = document.getElementById("mKey");
   const myData = myCode.elements.namedItem("userInput").value;
