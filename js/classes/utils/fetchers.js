@@ -12,8 +12,8 @@ export function post(url, body) {
         'Content-Type': 'application/json',}
     return fetch(url, {
         method: 'POST',
-        mode: 'cors',
-        cache: 'only-if-cached',
+        mode: '*',
+        cache: '*',
         headers: headers,
         redirect: 'follow',
         body: JSON.stringify(body),
