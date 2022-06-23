@@ -8,7 +8,7 @@ export function keccak256(data) {
     else {
         bufferableData = BufferShim.from(data);
     }
-    let Keccak = keccak();
+    let Keccak = keccak(256);
     const addressHash = '0x' + Keccak.update(data).hex;
     return addressHash;
 }
