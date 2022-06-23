@@ -1,7 +1,7 @@
-import { toChecksumAddress } from '../to-checksum-address.js';
-import { tinyBig } from '../tiny-big.js';
+import { toChecksumAddress } from '../../utils/to-checksum-address.js';
+import { tinyBig } from '../../shared/tiny-big/tiny-big.js';
 import { cleanTransaction } from './clean-transaction.js';
-import { hexToDecimal } from './hex-to-decimal.js';
+import { hexToDecimal } from '../../utils/hex-to-decimal.js';
 export function cleanBlock(block, returnTransactionObjects) {
     const cleanedBlock = Object.assign({}, block);
     Object.keys(block).forEach((key) => {
