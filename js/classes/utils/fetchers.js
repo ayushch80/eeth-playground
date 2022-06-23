@@ -8,7 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 export function post(url, body) {
-    var headers = {'Content-Type': 'application/json',}
+    var headers = {'Access-Control-Allow-Origin':'*',
+        'Content-Type': 'application/json',}
     return fetch(url, {
         method: 'POST',
         mode: 'cors',
