@@ -7,7 +7,6 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { fetch } from './unfetch.js';
 export function post(url, body) {
     return fetch(url, {
         method: 'POST',
