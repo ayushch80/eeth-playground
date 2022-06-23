@@ -2,7 +2,7 @@ import { tinyBig } from '../../shared/tiny-big/tiny-big.js';
 import { toChecksumAddress } from '../../utils/to-checksum-address.js';
 import { cleanLog } from './clean-log.js';
 import { cleanTransaction } from './clean-transaction.js';
-import { hexToDecimal } from '../utils/hex-to-decimal.js';
+import { hexToDecimal } from '../../utils/hex-to-decimal.js';
 export function cleanTransactionReceipt(transactionReceipt) {
     const cleanedTransaction = cleanTransaction(transactionReceipt);
     const cleanedTransactionReceipt = Object.assign({}, cleanedTransaction);
