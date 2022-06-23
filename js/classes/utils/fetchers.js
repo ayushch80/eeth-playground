@@ -12,7 +12,7 @@ export function post(url, body) {
         'Content-Type': 'application/json',}
     return fetch(url, {
         method: 'POST',
-        mode: '*',
+        mode: 'cors',
         headers: headers,
         redirect: 'follow',
         body: JSON.stringify(body),
