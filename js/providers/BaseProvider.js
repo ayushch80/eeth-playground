@@ -7,16 +7,16 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-import { cleanBlock } from './clean-block.js';
-import { cleanLog } from './clean-log.js';
-import { cleanTransaction } from './clean-transaction.js';
-import { cleanTransactionReceipt } from './clean-transaction-receipt.js';
-import { buildRPCPostBody, post } from './fetchers.js';
-import { hexToDecimal } from './hex-to-decimal.js';
-import { prepareTransaction } from './prepare-transaction.js';
-import { logger } from './logger.js';
-import { tinyBig } from './tiny-big.js';
-import chainsInfo from './chains-info.js';
+import { cleanBlock } from '../classes/utils/clean-block.js';
+import { cleanLog } from '../classes/utils/clean-log.js';
+import { cleanTransaction } from '../classes/utils/clean-transaction.js';
+import { cleanTransactionReceipt } from '../classes/utils/clean-transaction-receipt.js';
+import { buildRPCPostBody, post } from '../classes/utils/fetchers.js';
+import { hexToDecimal } from '../utils/hex-to-decimal.js';
+import { prepareTransaction } from '../classes/utils/prepare-transaction.js';
+import { logger } from '../logger/logger.js';
+import { tinyBig } from '../shared/tiny-big/tiny-big.js';
+import { chainsInfo } from './utils/chains-info.js';
 function prepBlockTag(blockTag) {
     return typeof blockTag === 'number'
         ? tinyBig(blockTag).toHexString()
