@@ -1,6 +1,6 @@
-import { Big } from '../big.js';
-import { TinyBig } from '../tiny-big.js';
-import { hexlify } from '../bytes.js';
+import { Big } from '../../libraries/big.js';
+import { TinyBig } from '../../shared/tiny-big/tiny-big.js';
+import { hexlify } from '../../utils/bytes.js';
 export function prepareTransaction(transaction) {
     const preparedTransaction = Object.assign({}, transaction);
     Object.keys(transaction).forEach((key) => {
