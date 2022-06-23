@@ -12,6 +12,8 @@ export function post(url, body) {
         method: 'POST',
         headers: {
             'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'POST',
+            'Access-Control-Allow-Headers': 'Content-Type',
             'Content-Type': 'application/json',
         },
         body: JSON.stringify(body),
