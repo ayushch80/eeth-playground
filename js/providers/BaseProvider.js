@@ -16,7 +16,7 @@ import { hexToDecimal } from '../utils/hex-to-decimal.js';
 import { prepareTransaction } from '../classes/utils/prepare-transaction.js';
 import { logger } from '../logger/logger.js';
 import { tinyBig } from '../shared/tiny-big/tiny-big.js';
-import { chainsInfo } from './utils/chains-info.js';
+import chainsInfo from './utils/chains-info.js';
 function prepBlockTag(blockTag) {
     return typeof blockTag === 'number'
         ? tinyBig(blockTag).toHexString()
