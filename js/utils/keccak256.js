@@ -1,10 +1,12 @@
 import { keccak } from '../libraries/keccak.js';
+import { BufferShim } from '../libraries/buffer.js'
 export function keccak256(data) {
+    let bufferableData;
     if (typeof data === 'string') {
-      let Data = (data.replace(/^0x/, ''), 'hex');
+    bufferableData = BufferShim.from(data.replace(/^0x/, ''), 'hex');
     }
     else {
-        console.log("Input cant be processed");
+        bufferableData = BufferShim.from(data);
     }
     let Keccak = keccak();
     const addressHash = '0x' + Keccak.update(data).hex;
