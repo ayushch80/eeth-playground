@@ -1,5 +1,5 @@
-import { toChecksumAddress } from '../to-checksum-address.js';
-import { hexToDecimal } from './hex-to-decimal.js';
+import { toChecksumAddress } from '../../utils/to-checksum-address.js';
+import { hexToDecimal } from '../../utils/hex-to-decimal.js';
 export function cleanLog(log, receiptLog) {
     const cleanedLog = Object.assign({}, log);
     Object.keys(log).forEach((key) => {
