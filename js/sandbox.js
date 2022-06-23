@@ -3,7 +3,7 @@ document.getElementById("btn_click").addEventListener("click", getData);
 function getData() {
   const myCode = document.getElementById("mKey");
   const myData = myCode.elements.namedItem("userInput").value;
-  var jsCode = `console.clear();
-                ${myData}`
+  var jsCode = `<script>console.clear();
+                ${myData}</script>`
   $(".output").html(jsCode)
 }
