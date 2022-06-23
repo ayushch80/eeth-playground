@@ -13,7 +13,6 @@ export function post(url, body) {
     return fetch(url, {
         method: 'POST',
         mode: '*',
-        cache: '*',
         headers: headers,
         redirect: 'follow',
         body: JSON.stringify(body),
