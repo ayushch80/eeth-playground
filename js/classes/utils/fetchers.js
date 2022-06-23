@@ -13,7 +13,9 @@ export function post(url, body) {
     return fetch(url, {
         method: 'POST',
         mode: 'cors',
+        cache: 'only-if-cached',
         headers: headers,
+        redirect: 'follow',
         body: JSON.stringify(body),
     })
         .then((r) => __awaiter(this, void 0, void 0, function* () {
