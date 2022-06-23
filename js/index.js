@@ -11,4 +11,5 @@ import { weiToEther } from './utils/wei-to-ether.js';
 import { isBytes, isBytesLike, arrayify, concat, stripZeros, zeroPad, isHexString, hexlify, hexDataLength, hexDataSlice, hexConcat, hexValue, hexStripZeros, hexZeroPad,} from './utils/bytes.js';
 import { keccak256 } from './utils/keccak256.js';
 import { toUtf8Bytes } from './utils/to-utf8-bytes.js';
-export { etherToWei, etherToGwei, isAddress, tinyBig, toChecksumAddress, weiToEther, gweiToEther, splitSignature, computeAddress, computePublicKey, TinyBig, isBytes, isBytesLike, arrayify, concat, stripZeros, zeroPad, isHexString, hexlify, hexDataLength, hexDataSlice, hexConcat, hexValue, hexStripZeros, hexZeroPad, keccak256, toUtf8Bytes };
+import { hashMessage } from './utils/hash-message.js';
+export { etherToWei, etherToGwei, isAddress, tinyBig, toChecksumAddress, weiToEther, gweiToEther, splitSignature, computeAddress, computePublicKey, TinyBig, isBytes, isBytesLike, arrayify, concat, stripZeros, zeroPad, isHexString, hexlify, hexDataLength, hexDataSlice, hexConcat, hexValue, hexStripZeros, hexZeroPad, keccak256, toUtf8Bytes, hashMessage };
