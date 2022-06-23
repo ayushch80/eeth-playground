@@ -13,4 +13,6 @@ import { keccak256 } from './utils/keccak256.js';
 import { toUtf8Bytes } from './utils/to-utf8-bytes.js';
 import { hashMessage } from './utils/hash-message.js';
 import { pack, solidityKeccak256 } from './utils/solidity-keccak256.js';
-export { etherToWei, etherToGwei, isAddress, tinyBig, toChecksumAddress, weiToEther, gweiToEther, splitSignature, computeAddress, computePublicKey, TinyBig, isBytes, isBytesLike, arrayify, concat, stripZeros, zeroPad, isHexString, hexlify, hexDataLength, hexDataSlice, hexConcat, hexValue, hexStripZeros, hexZeroPad, keccak256, toUtf8Bytes, hashMessage, pack, solidityKeccak256 };
+import { FallthroughProvider } from './providers/FallthroughProvider.js';
+import { JsonRpcProvider, jsonRpcProvider } from './providers/JsonRpcProvider.js';
+export { etherToWei, etherToGwei, isAddress, tinyBig, toChecksumAddress, weiToEther, gweiToEther, splitSignature, computeAddress, computePublicKey, TinyBig, isBytes, isBytesLike, arrayify, concat, stripZeros, zeroPad, isHexString, hexlify, hexDataLength, hexDataSlice, hexConcat, hexValue, hexStripZeros, hexZeroPad, keccak256, toUtf8Bytes, hashMessage, pack, solidityKeccak256, FallthroughProvider, JsonRpcProvider, jsonRpcProvider };
