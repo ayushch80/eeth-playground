@@ -1,5 +1,6 @@
-import { keccak }from '../libraries/keccak.js';
+import { sha3 } from '../libraries/js-sha3.js';
 import { BufferShim } from '../libraries/buffer.js'
+import { arrayify } from "./bytes.js";
 export function keccak256(data) {
     let bufferableData;
     if (typeof data === 'string') {
@@ -8,7 +9,6 @@ export function keccak256(data) {
     else {
         bufferableData = BufferShim.from(data);
     }
-    let Keccak = keccak(256);
-    const addressHash = '0x' + Keccak.update(data).hex;
+    const addressHash = '0x' + sha3.keccak_256(arrayify(data));
     return addressHash;
 }
