@@ -1,4 +1,4 @@
-import _buffer from "buffer";
+import _buffer from "./buffer.js";
 import sponge from "./sponge/index.js";
 Object.defineProperty(exports, "__esModule", {
     value: true
