@@ -1,4 +1,4 @@
-import { sha3 } from '../libraries/js-sha3.js';
+import sha3 from '../libraries/js-sha3.js';
 import { BufferShim } from '../libraries/buffer.js'
 import { arrayify } from "./bytes.js";
 export function keccak256(data) {
