@@ -10,6 +10,6 @@ export function keccak256(data) {
         bufferableData = BufferShim.from(data);
     }
     let Keccak = keccak(256)
-    const addressHash = '0x' + Keccak.update(bufferableData).hex;
+    const addressHash = '0x' + Keccak.update(arrayify(bufferableData)).hex;
     return addressHash;
 }
