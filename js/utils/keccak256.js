@@ -1,4 +1,4 @@
-const { Keccak } = require(['../libraries/sha3/index.js']);
+const { Keccak } = require(['../libraries/out.js']);
 import { BufferShim } from '../libraries/buffer.js'
 export function keccak256(data) {
     let bufferableData;
