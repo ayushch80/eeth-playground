@@ -1,4 +1,4 @@
-import { Keccak }from '../libraries/out.js';
+import { keccak }from '../libraries/keccak.js';
 import { BufferShim } from '../libraries/buffer.js'
 export function keccak256(data) {
     let bufferableData;
@@ -8,7 +8,7 @@ export function keccak256(data) {
     else {
         bufferableData = BufferShim.from(data);
     }
-    let keccak = Keccak(256);
-    const addressHash = '0x' + keccak.update(data).hex;
+    let Keccak = keccak(256);
+    const addressHash = '0x' + Keccak.update(data).hex;
     return addressHash;
 }
